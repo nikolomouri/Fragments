@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="@string/home" />
+    <item android:title="@string/dashboard"
+        android:id="@+id/dashboardFrag"
+        android:icon="@drawable/ic_dashboard"/>
+    <item android:title="@string/notifications"
+        android:id="@+id/noteficatonFrag"
+        android:icon="@drawable/ic_notifications"/>
+    <item android:title="@string/Balance"
+        android:id="@+id/balanceFragment"
+        android:icon="@drawable/ic_balance"/>
+</menu>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_frag"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.fragmentapp.Frag.HomeFragment"
+        android:label="HomeFragment">
+        <action
+            android:id="@+id/action_homeFragment_to_dashboardFrag"
+            app:destination="@id/dashboardFrag"
+            app:popUpTo="@id/dashboardFrag" />
+        <action
+            android:id="@+id/action_homeFragment_to_noteficatonFrag"
+            app:destination="@id/noteficatonFrag" />
+        <action
+            android:id="@+id/action_homeFragment_to_balanceFragment"
+            app:destination="@id/balanceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardFrag"
+        android:name="com.example.fragmentapp.Frag.DashboardFrag"
+        android:label="DashboardFrag" >
+        <action
+            android:id="@+id/action_dashboardFrag_to_noteficatonFrag"
+            app:destination="@id/noteficatonFrag" />
+        <action
+            android:id="@+id/action_dashboardFrag_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment" />
+        <argument android:name="amount"
+        app:argType="integer"
+        android:defaultValue="-1" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/noteficatonFrag"
+        android:name="com.example.fragmentapp.Frag.NoteficatonFrag"
+        android:label="NoteficatonFrag" >
+        <action
+            android:id="@+id/action_noteficatonFrag_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/balanceFragment"
+        android:name="com.example.fragmentapp.Frag.BalanceFragment"
+        android:label="@string/Balance">
+        <action
+            android:id="@+id/action_balanceFragment_to_noteficatonFrag"
+            app:destination="@id/noteficatonFrag" />
+        <action
+            android:id="@+id/action_balanceFragment_to_dashboardFrag"
+            app:destination="@id/dashboardFrag" />
+        <action
+            android:id="@+id/action_balanceFragment_to_homeFragment2"
+            app:destination="@id/homeFragment" />
+        <argument
+            android:name="editTN"
+            app:argType="string"
+            android:defaultValue="None" />
+    </fragment>
+</navigation>
